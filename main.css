@@ -1,17 +1,17 @@
 body {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 strong {
-    display: inline-block;
-    width: 100px;
+  display: inline-block;
+  width: 100px;
 }
 
 code {
-    color: #000;
+  color: #000;
 }
 
 .result {
-    margin: 10px 0;
-    padding: 10px;
+  margin: 10px 0;
+  padding: 10px;
 }
