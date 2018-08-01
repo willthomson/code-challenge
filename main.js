@@ -43,17 +43,17 @@ tests.forEach((test, index) => {
     passes++;
   }
   const result = `
-      <div class="result ${ bgStyle }">
-          <h4>Test ${ index + 1 }</h4>
-          <strong>Input:</strong> <code>${ JSON.stringify(test.input) }</code><br>
-          <strong>Output:</strong> <code>${ JSON.stringify(solution(test.input)) }</code><br>
-          <strong>Expected:</strong> <code>${ JSON.stringify(test.result) }</code>
-      </div>`;
+    <div class="result ${ bgStyle }">
+      <h4>Test ${ index + 1 }</h4>
+      <strong>Input:</strong> <code>${ JSON.stringify(test.input) }</code><br>
+      <strong>Output:</strong> <code>${ JSON.stringify(solution(test.input)) }</code><br>
+      <strong>Expected:</strong> <code>${ JSON.stringify(test.result) }</code>
+    </div>`;
   resultsEl.innerHTML += result;
 });
 
 resultsEl.innerHTML += `
-    <div class="total">
-        <h2>Total:</h2>
-        Passed ${ passes } out of ${ tests.length } tests (${ Math.round((passes / tests.length) * 100) }%)
-    </div>`;
+  <div class="total">
+    <h2>Total:</h2>
+    Passed ${ passes } out of ${ tests.length } tests (${ Math.round((passes / tests.length) * 100) }%)
+  </div>`;
