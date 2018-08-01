@@ -1,6 +1,6 @@
 
 /**
- * Each test in the array contains input data and an exected result.
+ * Each test in the array contains input data and an expected result.
  */
 tests = [
     {
