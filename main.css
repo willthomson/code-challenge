@@ -1,0 +1,8 @@
+strong {
+    display: inline-block;
+    width: 100px;
+}
+
+pre {
+    display: inline;
+}
