@@ -10,7 +10,15 @@ tests = [
     {
         input: [1,2,3],
         result: [1,2]
-    }
+    },
+    {
+        input: 1,
+        result: 1
+    },
+    {
+        input: "hello",
+        result: 'Hello'
+    },
 ];
 
 /**
@@ -28,18 +36,17 @@ const resultsEl = document.querySelector('.results');
 let passes = 0;
 
 tests.forEach((test, index) => {
-    let pass = `<span class="fail">FAIL</span>`;
+    let bgStyle = 'bg-danger';
     if (JSON.stringify(solution(test.input)) === JSON.stringify(test.result)) {
-        pass = `<span class="pass">PASS</span>`;
+        bgStyle = 'bg-success';
         passes++;
     }
     let result = `
-        <div>
-            <h3>Test ${index+1}</h2>
-            <strong>Input:</strong> <pre>${JSON.stringify(test.input)}</pre><br>
-            <strong>Output:</strong> <pre>${JSON.stringify(solution(test.input))}</pre><br>
-            <strong>Expected:</strong> <pre>${JSON.stringify(test.result)}</pre><br>
-            <strong>Result:</strong> ${pass}
+        <div class="result ${bgStyle}">
+            <h4>Test ${index+1}</h4>
+            <strong>Input:</strong> <code>${JSON.stringify(test.input)}</code><br>
+            <strong>Output:</strong> <code>${JSON.stringify(solution(test.input))}</code><br>
+            <strong>Expected:</strong> <code>${JSON.stringify(test.result)}</code>
         </div>`;
     resultsEl.innerHTML += result;
 });
